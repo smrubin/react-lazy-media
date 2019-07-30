@@ -1,4 +1,4 @@
-import LazyLoad from 'vanilla-lazyload';
+import LazyLoad from 'vanilla-lazyload/dist/lazyload.esm.js';
 
 export default class ReactLazyload {
   static instance;
