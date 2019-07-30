@@ -7,11 +7,5 @@ import './LazyImage.story.css';
 storiesOf('Lazy', module)
   .addDecorator(withKnobs)
   .add('LazyImage', () => {
-    return (
-      <LazyImage
-        classes={['lazyImage']}
-        lqip={'https://placekitten.com/200/290'}
-        src={'http://placekitten.com/200/300'}
-      />
-    );
+    return <LazyImage classes={['lazyImage']} src={'http://placekitten.com/200/300'} />;
   });
