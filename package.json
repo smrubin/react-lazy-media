@@ -1,0 +1,66 @@
+{
+  "name": "react-lazy-media",
+  "version": "0.1.0",
+  "description": "Lazy load image, picture, video, and iframe media React components",
+  "main": "lib/index.js",
+  "scripts": {
+    "lib": "npm run clean && babel src -d lib --ignore src/**/*.story.js",
+    "clean": "rm -rf lib && mkdir lib",
+    "pretty": "pretty-quick",
+    "prepublish": "npm run lib",
+    "storybook": "start-storybook -p 6006"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smrubin/react-lazy-media.git"
+  },
+  "author": "Sam Rubin <smrubin>",
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "lazyload",
+    "lazy",
+    "load",
+    "image",
+    "video",
+    "picture",
+    "webp"
+  ],
+  "bugs": {
+    "url": "https://github.com/smrubin/react-lazy-media/issues"
+  },
+  "homepage": "https://github.com/smrubin/react-lazy-media#readme",
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "prop-types": "^15.7.2",
+    "vanilla-lazyload": "^12.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-centered": "^5.1.9",
+    "@storybook/addon-knobs": "^5.1.9",
+    "@storybook/react": "^5.1.9",
+    "babel-loader": "^8.0.6",
+    "husky": "^3.0.2",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}
