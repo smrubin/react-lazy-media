@@ -1,4 +1,6 @@
-import LazyLoad from 'vanilla-lazyload/dist/lazyload.esm.js';
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+  var LazyLoad = require('vanilla-lazyload');
+}
 
 export default class ReactLazyload {
   static instance;
