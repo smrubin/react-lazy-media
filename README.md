@@ -6,6 +6,8 @@
 
 Lazy load image, picture, video, and iframe media React components. react-lazy-media uses [vanilla-lazyload](https://github.com/verlok/lazyload) under the hood to handle lazy loading.
 
+Polyfilled with the [Intersection Observer Polyfill](https://www.npmjs.com/package/intersection-observer)
+
 ### Installation and Usage:
 
 ```
@@ -61,4 +63,3 @@ Lazy load an HTML5 picture that attempts to load a Webp format of an image.
 
 [] Add tests
 [] Add code example for each component in readme
-[] Polyfill Intersection Observer?

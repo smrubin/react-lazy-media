@@ -35,6 +35,7 @@
   "homepage": "https://github.com/smrubin/react-lazy-media#readme",
   "dependencies": {
     "classnames": "^2.2.6",
+    "intersection-observer": "^0.7.0",
     "prop-types": "^15.7.2",
     "vanilla-lazyload": "^12.0.0"
   },
