@@ -10,7 +10,8 @@ export class LazyImage extends Component {
     id: PropTypes.string,
     src: PropTypes.string.isRequired,
     width: PropTypes.number,
-    height: PropTypes.number
+    height: PropTypes.number,
+    lqip: PropTypes.string // Low-quality image placeholder
   };
 
   static defaultProps = {
@@ -28,9 +29,17 @@ export class LazyImage extends Component {
   }
 
   render() {
-    const {alt, classes, id, src, width, height} = this.props;
+    const {alt, classes, id, lqip, src, width, height} = this.props;
     return (
-      <img alt={alt} className={classNames('lazy', ...classes)} data-src={src} height={height} id={id} width={width} />
+      <img
+        alt={alt}
+        className={classNames('lazy', ...classes)}
+        src={lqip}
+        data-src={src}
+        height={height}
+        id={id}
+        width={width}
+      />
     );
   }
 }

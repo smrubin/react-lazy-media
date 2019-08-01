@@ -11,7 +11,8 @@ export class LazyWebpPicture extends Component {
     src: PropTypes.string.isRequired,
     width: PropTypes.number,
     height: PropTypes.number,
-    webp: PropTypes.string
+    webp: PropTypes.string,
+    lqip: PropTypes.string // Low-quality image placeholder
   };
 
   static defaultProps = {

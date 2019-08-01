@@ -5,9 +5,10 @@ import {LazyWebpPicture} from './LazyWebpPicture';
 import './LazyWebpPicture.story.css';
 import png from './Hero.png';
 import webp from './Hero.png.webp';
+import lqip from './LQIP.jpeg';
 
 storiesOf('Lazy', module)
   .addDecorator(withKnobs)
   .add('LazyWebpPicture', () => {
-    return <LazyWebpPicture classes={['lazyWebpPicture']} src={png} webp={webp} />;
+    return <LazyWebpPicture classes={['lazyWebpPicture']} src={png} webp={webp} lqip={lqip} />;
   });

@@ -35,6 +35,8 @@ You can import `LazyImage` `LazyVideo` `LazyIframe` `LazyBackground` `LazyWebpPi
 
 ### Component Examples
 
+Every component has `id` and `classes` as props to pass down to the media element.
+
 #### LazyImage
 
 Lazy load an image.
@@ -59,3 +61,4 @@ Lazy load an HTML5 picture that attempts to load a Webp format of an image.
 
 [] Add tests
 [] Add code example for each component in readme
+[] Polyfill Intersection Observer?
