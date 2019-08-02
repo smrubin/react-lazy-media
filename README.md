@@ -8,6 +8,39 @@ Lazy load image, picture, video, and iframe media React components. react-lazy-m
 
 Polyfilled with the [Intersection Observer Polyfill](https://www.npmjs.com/package/intersection-observer)
 
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://raw.github.com/alrra/browser-logos/39.2.2/src/chrome/chrome_48x48.png" alt="Chrome"><br>
+      ✔
+    </td>
+    <td align="center">
+      <img src="https://raw.github.com/alrra/browser-logos/39.2.2/src/firefox/firefox_48x48.png" alt="Firefox"><br>
+      ✔
+    </td>
+    <td align="center">
+      <img src="https://raw.github.com/alrra/browser-logos/39.2.2/src/safari/safari_48x48.png" alt="Safari"><br>
+      6+
+    </td>
+    <td align="center">
+      <img src="https://raw.github.com/alrra/browser-logos/39.2.2/src/edge/edge_48x48.png" alt="Edge"><br>
+      ✔
+    </td>
+    <td align="center">
+      <img src="https://raw.github.com/alrra/browser-logos/39.2.2/src/archive/internet-explorer_7-8/internet-explorer_7-8_48x48.png" alt="Internet Explorer"><br>
+      10+
+    </td>
+    <td align="center">
+      <img src="https://raw.github.com/alrra/browser-logos/39.2.2/src/opera/opera_48x48.png" alt="Opera"><br>
+      ✔
+    </td>
+    <td align="center">
+      <img src="https://raw.github.com/alrra/browser-logos/39.2.2/src/android/android_48x48.png" alt="Android"><br>
+      4.4+
+    </td>
+  </tr>
+</table>
+
 ### Installation and Usage:
 
 ```
@@ -37,27 +70,71 @@ You can import `LazyImage` `LazyVideo` `LazyIframe` `LazyBackground` `LazyWebpPi
 
 ### Component Examples
 
-Every component has `id` and `classes` as props to pass down to the media element.
+#### Common
+
+The following APIs are shared by every component.
+
+| Name    | Type          | Default | Description                                                                              |
+| ------- | ------------- | ------- | ---------------------------------------------------------------------------------------- |
+| classes | Array<string> | `[]`    | Additional CSS classes (in addition to 'lazy' for the media element (img, video, iframe) |
+| id      | string        | `''`    | id for the media element (img, video, iframe)                                            |
 
 #### LazyImage
 
-Lazy load an image.
+Lazy loads an image element. Supports loading a low-quality image placeholder.
+
+| Name   | Type              | Default          | Description                                                                                          |
+| ------ | ----------------- | ---------------- | ---------------------------------------------------------------------------------------------------- |
+| alt    | string            | `[]`             | Alt text for the img                                                                                 |
+| src    | string (Required) | `N/A - Required` | src for the img                                                                                      |
+| width  | string            | `''`             | width for the img                                                                                    |
+| height | string            | `''`             | height for the img                                                                                   |
+| lqip   | string            | `''`             | src for a loq quality image placeholder. will always be loaded and then replaced with actual src img |
 
 #### LazyBackground
 
-Lazy load a background image on a div.
+Lazy loads a background image for a div.
+
+| Name | Type              | Default          | Description                  |
+| ---- | ----------------- | ---------------- | ---------------------------- |
+| src  | string (Required) | `N/A - Required` | src for the background image |
 
 #### LazyVideo
 
-Lazy load an HTML5 video.
+Lazy loads an HTML5 video.
+
+| Name     | Type              | Default          | Description                                        |
+| -------- | ----------------- | ---------------- | -------------------------------------------------- |
+| src      | string (Required) | `N/A - Required` | src for the video                                  |
+| width    | string            | `''`             | width for the video                                |
+| height   | string            | `''`             | height for the video                               |
+| poster   | string            | `''`             | poster image for the video (before it loads/plays) |
+| controls | bool              | `true`           | whether or not the video should display controls   |
+| preload  | bool              | `false`          | whether or not the video should be preloaded       |
+| autoplay | bool              | `false`          | whether or not the video should autoplay           |
+| loop     | bool              | `false`          | whether or not the video should loop               |
+| muted    | bool              | `false`          | whether or not the video should be muted           |
 
 #### LazyIframe
 
-Lazy load an IFrame.
+Lazy loads an iframe.
+
+| Name | Type              | Default          | Description        |
+| ---- | ----------------- | ---------------- | ------------------ |
+| src  | string (Required) | `N/A - Required` | src for the iframe |
 
 #### LazyWebpPicture
 
-Lazy load an HTML5 picture that attempts to load a Webp format of an image.
+Lazy loads an HTML5 picture. Attempts to load a Webp version of the asset first, and falls back to original src. Most of the props are passed down to the `LazyImage` child of this component.
+
+| Name   | Type              | Default          | Description                                                                                          |
+| ------ | ----------------- | ---------------- | ---------------------------------------------------------------------------------------------------- |
+| alt    | string            | `[]`             | Alt text for the img                                                                                 |
+| src    | string (Required) | `N/A - Required` | src for the img                                                                                      |
+| width  | string            | `''`             | width for the img                                                                                    |
+| height | string            | `''`             | height for the img                                                                                   |
+| lqip   | string            | `''`             | src for a loq quality image placeholder. will always be loaded and then replaced with actual src img |
+| webp   | string            | `''`             | The webp src for the img. Will suffix the src prop of not provided (e.g. hero.png => hero.png.webp)  |
 
 #### Todo
 
