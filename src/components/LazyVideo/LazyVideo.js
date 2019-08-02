@@ -11,12 +11,20 @@ export class LazyVideo extends Component {
     src: PropTypes.string.isRequired,
     width: PropTypes.number,
     height: PropTypes.number,
-    poster: PropTypes.string
+    poster: PropTypes.string,
+    autoplay: PropTypes.bool,
+    preload: PropTypes.bool,
+    muted: PropTypes.bool,
+    loop: PropTypes.bool
   };
 
   static defaultProps = {
     classes: [],
-    controls: true
+    controls: true,
+    autoplay: false,
+    preload: false,
+    loop: false,
+    muted: true
   };
 
   // Update lazyLoad after first rendering of every image
@@ -29,18 +37,25 @@ export class LazyVideo extends Component {
     ReactLazyload.getInstance().update();
   }
 
+  // TODO - Add dynamic support for other video sources
   render() {
-    const {classes, id, controls, width, height, src, poster} = this.props;
+    const {classes, id, controls, width, height, src, poster, autoplay, preload, muted, loop} = this.props;
     return (
       <video
         className={classNames('lazy', ...classes)}
         id={id}
-        controls={controls}
         width={width}
         height={height}
         data-src={src}
         poster={poster}
-      ></video>
+        controls={controls}
+        autoPlay={autoplay}
+        muted={muted}
+        loop={loop}
+        preload={preload ? 'auto' : 'none'}
+      >
+        <source src={src} type="video/mp4" />
+      </video>
     );
   }
 }
