@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import ReactLazyload from '../../ReactLazyload';
 import classNames from 'classnames';
+import {ReactLazyMedia} from '../../ReactLazyMedia';
 
 export class LazyVideo extends Component {
   static propTypes = {
@@ -29,12 +29,12 @@ export class LazyVideo extends Component {
 
   // Update lazyLoad after first rendering of every image
   componentDidMount() {
-    ReactLazyload.getInstance().update();
+    ReactLazyMedia.getInstance().update();
   }
 
   // Update lazyLoad after re-rendering of every image
   componentDidUpdate() {
-    ReactLazyload.getInstance().update();
+    ReactLazyMedia.getInstance().update();
   }
 
   // TODO - Add dynamic support for other video sources

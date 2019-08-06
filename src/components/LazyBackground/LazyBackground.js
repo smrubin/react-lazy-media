@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import ReactLazyload from '../../ReactLazyload';
+import {ReactLazyMedia} from '../../ReactLazyMedia';
 
 export class LazyBackground extends Component {
   static propTypes = {
@@ -16,12 +16,12 @@ export class LazyBackground extends Component {
 
   // Update lazyLoad after first rendering of every image
   componentDidMount() {
-    ReactLazyload.getInstance().update();
+    ReactLazyMedia.getInstance().update();
   }
 
   // Update lazyLoad after re-rendering of every image
   componentDidUpdate() {
-    ReactLazyload.getInstance().update();
+    ReactLazyMedia.getInstance().update();
   }
 
   render() {

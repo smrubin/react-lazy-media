@@ -3,7 +3,7 @@ if (typeof window !== 'undefined' && typeof document !== 'undefined') {
   var LazyLoad = require('vanilla-lazyload');
 }
 
-export default class ReactLazyload {
+export class ReactLazyMedia {
   static instance;
 
   constructor(selector = '.lazy') {
@@ -11,22 +11,22 @@ export default class ReactLazyload {
       window.IntersectionObserver = IntersectionObserverPolyfill;
     }
 
-    if (ReactLazyload.instance) {
-      return ReactLazyload.instance;
+    if (ReactLazyMedia.instance) {
+      return ReactLazyMedia.instance;
     }
 
     const config = {
       elements_selector: selector
     };
 
-    ReactLazyload.instance = new LazyLoad(config);
+    ReactLazyMedia.instance = new LazyLoad(config);
   }
 
   static getInstance() {
-    if (!ReactLazyload.instance) {
+    if (!ReactLazyMedia.instance) {
       new this();
     }
 
-    return ReactLazyload.instance;
+    return ReactLazyMedia.instance;
   }
 }

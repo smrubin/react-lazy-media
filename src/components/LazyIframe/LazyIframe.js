@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import ReactLazyload from '../../ReactLazyload';
+import {ReactLazyMedia} from '../../ReactLazyMedia';
 
 export class LazyIframe extends Component {
   static propTypes = {
@@ -16,12 +16,12 @@ export class LazyIframe extends Component {
 
   // Update lazyLoad after first rendering of every iframe
   componentDidMount() {
-    ReactLazyload.getInstance().update();
+    ReactLazyMedia.getInstance().update();
   }
 
   // Update lazyLoad after re-rendering of every iframe
   componentDidUpdate() {
-    ReactLazyload.getInstance().update();
+    ReactLazyMedia.getInstance().update();
   }
 
   render() {

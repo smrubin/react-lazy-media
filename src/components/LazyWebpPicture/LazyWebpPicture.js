@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import ReactLazyload from '../../ReactLazyload';
+import {ReactLazyMedia} from '../../ReactLazyMedia';
 import {LazyImage} from '../LazyImage/LazyImage';
 
 export class LazyWebpPicture extends Component {
@@ -29,12 +29,12 @@ export class LazyWebpPicture extends Component {
 
   // Update lazyLoad after first rendering of every image
   componentDidMount() {
-    ReactLazyload.getInstance().update();
+    ReactLazyMedia.getInstance().update();
   }
 
   // Update lazyLoad after re-rendering of every image
   componentDidUpdate() {
-    ReactLazyload.getInstance().update();
+    ReactLazyMedia.getInstance().update();
   }
 
   // Fallback to src if webp failed to load.
