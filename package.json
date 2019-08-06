@@ -8,7 +8,8 @@
     "clean": "rm -rf lib && mkdir lib",
     "pretty": "pretty-quick",
     "prepublish": "npm run lib",
-    "storybook": "start-storybook -p 6006"
+    "storybook": "start-storybook -p 6006",
+    "test": "jest"
   },
   "files": [
     "lib"
@@ -52,12 +53,17 @@
     "@storybook/addon-centered": "^5.1.9",
     "@storybook/addon-knobs": "^5.1.9",
     "@storybook/react": "^5.1.9",
+    "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
     "husky": "^3.0.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.8.0",
+    "jest-junit": "^7.0.0",
     "prettier": "^1.18.2",
     "pretty-quick": "^1.11.1",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-test-renderer": "^16.8.6"
   },
   "husky": {
     "hooks": {

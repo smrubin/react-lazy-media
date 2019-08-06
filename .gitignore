@@ -4,3 +4,6 @@ npm-debug.log*
 .DS_Store
 *.tgz
 package
+
+# junit reports
+junit.xml

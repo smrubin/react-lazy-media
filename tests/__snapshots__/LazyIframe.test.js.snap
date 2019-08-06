@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LazyIframe should have an id 1`] = `
+<iframe
+  className="lazy"
+  data-src="/page.html"
+  id="lazyIframe"
+/>
+`;
+
+exports[`LazyIframe should have classes 1`] = `
+<iframe
+  className="lazy class1 class2"
+  data-src="/page.html"
+/>
+`;
+
+exports[`LazyIframe should render a iframe with a src 1`] = `
+<iframe
+  className="lazy"
+  data-src="/page.html"
+/>
+`;
+
+exports[`LazyIframe should require a src prop 1`] = `
+"Warning: Failed prop type: The prop \`src\` is marked as required in \`LazyIframe\`, but its value is \`undefined\`.
+    in LazyIframe"
+`;

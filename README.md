@@ -138,5 +138,4 @@ Lazy loads an HTML5 picture. Attempts to load a Webp version of the asset first,
 
 #### Todo
 
-[] Add tests
 [] Add code example for each component in readme

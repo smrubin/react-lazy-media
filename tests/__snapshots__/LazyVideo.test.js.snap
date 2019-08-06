@@ -1,0 +1,195 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LazyVideo should autoplay 1`] = `
+<video
+  autoPlay={false}
+  className="lazy"
+  controls={true}
+  data-src="/video.mp4"
+  loop={false}
+  muted={true}
+  preload="none"
+>
+  <source
+    src="/video.mp4"
+    type="video/mp4"
+  />
+</video>
+`;
+
+exports[`LazyVideo should be preloaded 1`] = `
+<video
+  autoPlay={false}
+  className="lazy"
+  controls={true}
+  data-src="/video.mp4"
+  loop={false}
+  muted={true}
+  preload="auto"
+>
+  <source
+    src="/video.mp4"
+    type="video/mp4"
+  />
+</video>
+`;
+
+exports[`LazyVideo should have 300px height 1`] = `
+<video
+  autoPlay={false}
+  className="lazy"
+  controls={true}
+  data-src="/video.mp4"
+  height={300}
+  loop={false}
+  muted={true}
+  preload="none"
+>
+  <source
+    src="/video.mp4"
+    type="video/mp4"
+  />
+</video>
+`;
+
+exports[`LazyVideo should have 300px width 1`] = `
+<video
+  autoPlay={false}
+  className="lazy"
+  controls={true}
+  data-src="/video.mp4"
+  loop={false}
+  muted={true}
+  preload="none"
+  width={300}
+>
+  <source
+    src="/video.mp4"
+    type="video/mp4"
+  />
+</video>
+`;
+
+exports[`LazyVideo should have an id 1`] = `
+<video
+  autoPlay={false}
+  className="lazy"
+  controls={true}
+  data-src="/video.mp4"
+  id="lazyVideo"
+  loop={false}
+  muted={true}
+  preload="none"
+>
+  <source
+    src="/video.mp4"
+    type="video/mp4"
+  />
+</video>
+`;
+
+exports[`LazyVideo should have classes 1`] = `
+<video
+  autoPlay={false}
+  className="lazy class1 class2"
+  controls={true}
+  data-src="/video.mp4"
+  loop={false}
+  muted={true}
+  preload="none"
+>
+  <source
+    src="/video.mp4"
+    type="video/mp4"
+  />
+</video>
+`;
+
+exports[`LazyVideo should not be muted 1`] = `
+<video
+  autoPlay={false}
+  className="lazy"
+  controls={true}
+  loop={false}
+  muted={true}
+  preload="none"
+>
+  <source
+    type="video/mp4"
+  />
+</video>
+`;
+
+exports[`LazyVideo should not be preloaded 1`] = `
+<video
+  autoPlay={false}
+  className="lazy"
+  controls={true}
+  data-src="/video.mp4"
+  loop={false}
+  muted={true}
+  preload="none"
+>
+  <source
+    src="/video.mp4"
+    type="video/mp4"
+  />
+</video>
+`;
+
+exports[`LazyVideo should not show controls 1`] = `
+<video
+  autoPlay={false}
+  className="lazy"
+  controls={true}
+  data-src="/video.mp4"
+  loop={false}
+  muted={true}
+  preload="none"
+>
+  <source
+    src="/video.mp4"
+    type="video/mp4"
+  />
+</video>
+`;
+
+exports[`LazyVideo should render a video with a src 1`] = `
+<video
+  autoPlay={false}
+  className="lazy"
+  controls={true}
+  data-src="/video.mp4"
+  loop={false}
+  muted={true}
+  preload="none"
+>
+  <source
+    src="/video.mp4"
+    type="video/mp4"
+  />
+</video>
+`;
+
+exports[`LazyVideo should render a video with a src and poster 1`] = `
+<video
+  autoPlay={false}
+  className="lazy"
+  controls={true}
+  data-src="/video.mp4"
+  loop={false}
+  muted={true}
+  poster="/poster.jpg"
+  preload="none"
+>
+  <source
+    src="/video.mp4"
+    type="video/mp4"
+  />
+</video>
+`;
+
+exports[`LazyVideo should require a src prop 1`] = `
+"Warning: Failed prop type: The prop \`src\` is marked as required in \`LazyVideo\`, but its value is \`undefined\`.
+    in LazyVideo"
+`;

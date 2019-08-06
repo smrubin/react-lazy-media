@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LazyImage render an image with a low quality image placeholder (lqip) 1`] = `
+<img
+  className="lazy"
+  data-src="/image.jpeg"
+  src="/lqip.jpeg"
+/>
+`;
+
+exports[`LazyImage should have 300px height 1`] = `
+<img
+  className="lazy"
+  data-src="/image.jpeg"
+  height={300}
+/>
+`;
+
+exports[`LazyImage should have 300px width 1`] = `
+<img
+  className="lazy"
+  data-src="/image.jpeg"
+  width={300}
+/>
+`;
+
+exports[`LazyImage should have an id 1`] = `
+<img
+  className="lazy"
+  data-src="/image.jpeg"
+  id="lazyImage"
+/>
+`;
+
+exports[`LazyImage should have classes 1`] = `
+<img
+  className="lazy class1 class2"
+  data-src="/image.jpeg"
+/>
+`;
+
+exports[`LazyImage should render an image with a src 1`] = `
+<img
+  className="lazy"
+  data-src="/image.jpeg"
+/>
+`;
+
+exports[`LazyImage should render an image with a src and alt text 1`] = `
+<img
+  alt="My image"
+  className="lazy"
+  data-src="/image.jpeg"
+/>
+`;
+
+exports[`LazyImage should require a src prop 1`] = `
+"Warning: Failed prop type: The prop \`src\` is marked as required in \`LazyImage\`, but its value is \`undefined\`.
+    in LazyImage"
+`;
