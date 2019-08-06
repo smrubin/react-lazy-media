@@ -39,6 +39,13 @@ exports[`LazyImage should have classes 1`] = `
 />
 `;
 
+exports[`LazyImage should have onError 1`] = `
+<img
+  className="lazy"
+  data-src="/image.jpeg"
+/>
+`;
+
 exports[`LazyImage should render an image with a src 1`] = `
 <img
   className="lazy"

@@ -60,3 +60,9 @@ test('LazyImage should have classes', () => {
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
+
+test('LazyImage should have onError', () => {
+  const component = renderer.create(<LazyImage src={'/image.jpeg'} onError={console.log('Error!')} />);
+  const tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
+});

@@ -1,5 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`LazyWebpPicture should render a picture with a src and specified webp src 1`] = `
+<picture>
+  <source
+    data-srcset="/image.webp"
+    type="image/webp"
+  />
+  <img
+    className="lazy"
+    data-src="/image.jpeg"
+    onError={[Function]}
+  />
+</picture>
+`;
+
 exports[`LazyWebpPicture should render an picture with a src 1`] = `
 <picture>
   <source
@@ -9,19 +23,7 @@ exports[`LazyWebpPicture should render an picture with a src 1`] = `
   <img
     className="lazy"
     data-src="/image.jpeg"
-  />
-</picture>
-`;
-
-exports[`LazyWebpPicture should render an picture with a webp src 1`] = `
-<picture>
-  <source
-    data-srcset="/image.webp"
-    type="image/webp"
-  />
-  <img
-    className="lazy"
-    data-src="/image.jpeg"
+    onError={[Function]}
   />
 </picture>
 `;

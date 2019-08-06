@@ -11,4 +11,10 @@ storiesOf('Lazy', module)
   .addDecorator(withKnobs)
   .add('LazyWebpPicture', () => {
     return <LazyWebpPicture classes={['lazyWebpPicture']} src={png} webp={webp} lqip={lqip} />;
+  })
+  .add('LazyWebpPicture - No Webp Specified', () => {
+    return <LazyWebpPicture classes={['lazyWebpPicture']} src={png} lqip={lqip} />;
+  })
+  .add('LazyWebpPicture - No Webp Found', () => {
+    return <LazyWebpPicture classes={['lazyWebpPicture']} src={png} webp={'./Hero.webp'} lqip={lqip} />;
   });

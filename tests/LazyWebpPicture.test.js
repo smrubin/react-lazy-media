@@ -26,7 +26,7 @@ test('LazyWebpPicture should have default props and children', () => {
 
   expect(lazyImageChild.type).toBe('img');
 
-  expect(lazyImageChild.props).toEqual({
+  expect(lazyImageChild.props).toMatchObject({
     'data-src': '/image.jpeg',
     className: 'lazy'
   });
@@ -38,7 +38,7 @@ test('LazyWebpPicture should render an picture with a src', () => {
   expect(tree).toMatchSnapshot();
 });
 
-test('LazyWebpPicture should render an picture with a webp src', () => {
+test('LazyWebpPicture should render a picture with a src and specified webp src', () => {
   const component = renderer.create(<LazyWebpPicture src={'/image.jpeg'} webp={'/image.webp'} />);
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();

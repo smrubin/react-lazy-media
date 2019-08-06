@@ -4,6 +4,14 @@ import ReactLazyload from '../../ReactLazyload';
 import {LazyImage} from '../LazyImage/LazyImage';
 
 export class LazyWebpPicture extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      errored: false
+    };
+  }
+
   static propTypes = {
     alt: PropTypes.string,
     classes: PropTypes.arrayOf(PropTypes.string),
@@ -29,14 +37,24 @@ export class LazyWebpPicture extends Component {
     ReactLazyload.getInstance().update();
   }
 
-  // TODO - Don't try to load the webp image if the file does not exist.
+  // Fallback to src if webp failed to load.
+  onError() {
+    if (!this.state.errored) {
+      this.setState({
+        srcSet: this.props.src,
+        errored: true
+      });
+    }
+  }
+
   render() {
     const webp = this.props.webp || `${this.props.src}.webp`;
+    const type = this.state.errored ? '' : 'image/webp';
 
     return (
       <picture>
-        <source type="image/webp" data-srcset={webp} />
-        <LazyImage {...this.props} />
+        <source type={type} data-srcset={webp} srcSet={this.state.srcSet} />
+        <LazyImage {...{...this.props, onError: this.onError.bind(this)}} />
       </picture>
     );
   }

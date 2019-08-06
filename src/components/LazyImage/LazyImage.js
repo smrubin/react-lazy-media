@@ -11,7 +11,8 @@ export class LazyImage extends Component {
     src: PropTypes.string.isRequired,
     width: PropTypes.number,
     height: PropTypes.number,
-    lqip: PropTypes.string // Low-quality image placeholder
+    lqip: PropTypes.string, // Low-quality image placeholder
+    onError: PropTypes.func
   };
 
   static defaultProps = {
@@ -29,7 +30,7 @@ export class LazyImage extends Component {
   }
 
   render() {
-    const {alt, classes, id, lqip, src, width, height} = this.props;
+    const {alt, classes, id, lqip, src, width, height, onError} = this.props;
     return (
       <img
         alt={alt}
@@ -39,6 +40,7 @@ export class LazyImage extends Component {
         height={height}
         id={id}
         width={width}
+        onError={onError}
       />
     );
   }
