@@ -1,6 +1,6 @@
 {
   "name": "react-lazy-media",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "Lazy load image, picture, video, and iframe media React components",
   "main": "lib/index.js",
   "scripts": {
