@@ -45,5 +45,3 @@ export class LazyImage extends Component {
     );
   }
 }
-
-export default LazyImage;
