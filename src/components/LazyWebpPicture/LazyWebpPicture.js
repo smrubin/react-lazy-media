@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import ReactLazyload from '../../ReactLazyload';
-import LazyImage from '../LazyImage/LazyImage';
+import {LazyImage} from '../LazyImage/LazyImage';
 
 export class LazyWebpPicture extends Component {
   static propTypes = {
