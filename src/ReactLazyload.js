@@ -1,4 +1,4 @@
-import IntersectionObserver from 'intersection-observer';
+import IntersectionObserverPolyfill from 'intersection-observer';
 if (typeof window !== 'undefined' && typeof document !== 'undefined') {
   var LazyLoad = require('vanilla-lazyload');
 }
@@ -8,7 +8,7 @@ export default class ReactLazyload {
 
   constructor(selector = '.lazy') {
     if (!window.IntersectionObserver) {
-      window.IntersectionObserver = IntersectionObserver;
+      window.IntersectionObserver = IntersectionObserverPolyfill;
     }
 
     if (ReactLazyload.instance) {
