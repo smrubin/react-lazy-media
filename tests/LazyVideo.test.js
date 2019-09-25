@@ -14,7 +14,6 @@ test('LazyVideo should have default props', () => {
   const tree = component.toJSON();
 
   expect(tree.props).toEqual({
-    'data-src': '/video.mp4',
     autoPlay: false,
     controls: true,
     loop: false,
@@ -58,7 +57,7 @@ test('LazyVideo should not be preloaded', () => {
 });
 
 test('LazyVideo should not be muted', () => {
-  const component = renderer.create(<LazyVideo videoUrl={'/video.mp4'} mute={false} />);
+  const component = renderer.create(<LazyVideo src={'/video.mp4'} mute={false} />);
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 });
