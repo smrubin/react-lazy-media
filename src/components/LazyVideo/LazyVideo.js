@@ -41,6 +41,8 @@ export class LazyVideo extends Component {
       return null;
     }
 
+    //TODO: Add support for autoplaying videos
+
     return (
       <video
         className={classNames('lazy', ...classes)}
