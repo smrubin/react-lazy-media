@@ -8,7 +8,11 @@ storiesOf('Lazy', module)
   .addDecorator(withKnobs)
   .add('LazyBackground', () => {
     return (
-      <LazyBackground src={'http://placekitten.com/200/300'} classes={['lazyBackground']}>
+      <LazyBackground
+        classes={['lazyBackground']}
+        backgroundClass={'testBGClass'}
+        src={'http://placekitten.com/200/300'}
+      >
         <span>Hello there!</span>
       </LazyBackground>
     );

@@ -38,7 +38,7 @@
     "classnames": "^2.2.6",
     "intersection-observer": "^0.7.0",
     "prop-types": "^15.7.2",
-    "vanilla-lazyload": "^12.0.0"
+    "yall-js": "^3.1.5"
   },
   "peerDependencies": {
     "react": ">=16.0.0",

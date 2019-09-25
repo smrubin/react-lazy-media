@@ -19,14 +19,8 @@ export class LazyImage extends Component {
     classes: []
   };
 
-  // Update lazyLoad after first rendering of every image
   componentDidMount() {
-    ReactLazyMedia.getInstance().update();
-  }
-
-  // Update lazyLoad after re-rendering of every image
-  componentDidUpdate() {
-    ReactLazyMedia.getInstance().update();
+    ReactLazyMedia.getInstance();
   }
 
   render() {
