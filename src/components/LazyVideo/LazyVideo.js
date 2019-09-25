@@ -37,17 +37,11 @@ export class LazyVideo extends Component {
     muted: true
   };
 
-  // // Update lazyLoad after first rendering of every image
+  // Update lazyLoad after first rendering of every image
   componentDidMount() {
     ReactLazyMedia.getInstance();
   }
-  //
-  // // Update lazyLoad after re-rendering of every image
-  // componentDidUpdate() {
-  //   ReactLazyMedia.getInstance().update();
-  // }
 
-  // TODO - Add dynamic support for other video sources
   render() {
     const {classes, id, controls, width, height, src, poster, autoplay, preload, muted, loop} = this.props;
     const mediaType = src.split('.').pop();
