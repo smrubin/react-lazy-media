@@ -9,13 +9,19 @@ test('LazyBackground should require a src prop', () => {
 });
 
 test('LazyBackground should have default props', () => {
-  const component = renderer.create(<LazyBackground src={'/img.jpeg'} />);
+  const component = renderer.create(
+    <LazyBackground backgroundClass={'someClassName'} src={'/img.jpeg'} id={'someID'} />
+  );
 
   const tree = component.toJSON();
+  const child = tree.children[1];
+  const styleElement = tree.children[0];
 
-  expect(tree.props).toEqual({
-    'data-bg': 'url(/img.jpeg)',
-    className: 'lazy'
+  expect(JSON.stringify(styleElement)).toMatch('/img.jpeg');
+
+  expect(child.props).toEqual({
+    id: 'someID',
+    className: 'lazy-bg someClassName'
   });
 });
 
@@ -34,7 +40,7 @@ test('LazyBackground should render children', () => {
   const tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 
-  const child = tree.children.pop();
+  const child = tree.children.pop().children.pop();
   expect(child.type).toBe('span');
 });
 

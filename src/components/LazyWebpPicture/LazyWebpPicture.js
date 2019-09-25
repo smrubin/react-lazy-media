@@ -29,12 +29,7 @@ export class LazyWebpPicture extends Component {
 
   // Update lazyLoad after first rendering of every image
   componentDidMount() {
-    ReactLazyMedia.getInstance().update();
-  }
-
-  // Update lazyLoad after re-rendering of every image
-  componentDidUpdate() {
-    ReactLazyMedia.getInstance().update();
+    ReactLazyMedia.getInstance();
   }
 
   // Fallback to src if webp failed to load.

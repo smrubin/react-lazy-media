@@ -1,39 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LazyBackground should have an id 1`] = `
-<div
-  className="lazy"
-  data-bg="url(/img.jpeg)"
-  id="lazyBackground"
-/>
+<div>
+  <style>
+    .undefined.lazy-bg-loaded {
+                    background: url("/img.jpeg")
+                }
+  </style>
+  <div
+    className="lazy-bg"
+    id="lazyBackground"
+  />
+</div>
 `;
 
 exports[`LazyBackground should have classes 1`] = `
-<div
-  className="lazy class1 class2"
-  data-bg="url(/img.jpeg)"
-/>
+<div>
+  <style>
+    .undefined.lazy-bg-loaded {
+                    background: url("/img.jpeg")
+                }
+  </style>
+  <div
+    className="lazy-bg class1 class2"
+  />
+</div>
 `;
 
 exports[`LazyBackground should render a div with a background image with a src 1`] = `
-<div
-  className="lazy"
-  data-bg="url(/img.jpeg)"
-/>
+<div>
+  <style>
+    .undefined.lazy-bg-loaded {
+                    background: url("/img.jpeg")
+                }
+  </style>
+  <div
+    className="lazy-bg"
+  />
+</div>
 `;
 
 exports[`LazyBackground should render children 1`] = `
-<div
-  className="lazy"
-  data-bg="url(/img.jpeg)"
->
-  <span>
-    Hello World
-  </span>
+<div>
+  <style>
+    .undefined.lazy-bg-loaded {
+                    background: url("/img.jpeg")
+                }
+  </style>
+  <div
+    className="lazy-bg"
+  >
+    <span>
+      Hello World
+    </span>
+  </div>
 </div>
 `;
 
 exports[`LazyBackground should require a src prop 1`] = `
-"Warning: Failed prop type: The prop \`src\` is marked as required in \`LazyBackground\`, but its value is \`undefined\`.
+"Warning: Failed prop type: The prop \`backgroundClass\` is marked as required in \`LazyBackground\`, but its value is \`undefined\`.
     in LazyBackground"
 `;

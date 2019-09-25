@@ -14,14 +14,8 @@ export class LazyIframe extends Component {
     classes: []
   };
 
-  // Update lazyLoad after first rendering of every iframe
   componentDidMount() {
-    ReactLazyMedia.getInstance().update();
-  }
-
-  // Update lazyLoad after re-rendering of every iframe
-  componentDidUpdate() {
-    ReactLazyMedia.getInstance().update();
+    ReactLazyMedia.getInstance();
   }
 
   render() {

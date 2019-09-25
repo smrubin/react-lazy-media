@@ -1,12 +1,10 @@
 import IntersectionObserverPolyfill from 'intersection-observer';
-if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-  var LazyLoad = require('vanilla-lazyload');
-}
+import yall from 'yall-js';
 
 export class ReactLazyMedia {
   static instance;
 
-  constructor(selector = '.lazy') {
+  constructor() {
     if (!window.IntersectionObserver) {
       window.IntersectionObserver = IntersectionObserverPolyfill;
     }
@@ -16,10 +14,10 @@ export class ReactLazyMedia {
     }
 
     const config = {
-      elements_selector: selector
+      threshold: 300
     };
 
-    ReactLazyMedia.instance = new LazyLoad(config);
+    ReactLazyMedia.instance = yall(config);
   }
 
   static getInstance() {

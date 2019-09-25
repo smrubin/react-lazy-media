@@ -29,32 +29,34 @@ export class LazyVideo extends Component {
 
   // Update lazyLoad after first rendering of every image
   componentDidMount() {
-    ReactLazyMedia.getInstance().update();
+    ReactLazyMedia.getInstance();
   }
 
-  // Update lazyLoad after re-rendering of every image
-  componentDidUpdate() {
-    ReactLazyMedia.getInstance().update();
-  }
-
-  // TODO - Add dynamic support for other video sources
   render() {
     const {classes, id, controls, width, height, src, poster, autoplay, preload, muted, loop} = this.props;
+    const mediaType = src.split('.').pop();
+
+    //Only supporting mp4 and webm (for now?)
+    if (mediaType !== 'mp4' && mediaType !== 'webm') {
+      return null;
+    }
+
+    //TODO: Add support for autoplaying videos
+
     return (
       <video
         className={classNames('lazy', ...classes)}
         id={id}
         width={width}
         height={height}
-        data-src={src}
-        poster={poster}
+        data-poster={poster}
         controls={controls}
         autoPlay={autoplay}
         muted={muted}
         loop={loop}
         preload={preload ? 'auto' : 'none'}
       >
-        <source src={src} type="video/mp4" />
+        <source src={src} type={`video/${mediaType}`} />
       </video>
     );
   }
