@@ -2,16 +2,6 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {ReactLazyMedia} from '../../ReactLazyMedia';
-import yall from 'yall-js';
-
-if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-  // var LazyLoad = require('vanilla-lazyload');
-}
-
-// document.addEventListener("DOMContentLoaded", function() {
-//   yall();
-//   console.log("Is this loading?");
-// });
 
 export class LazyVideo extends Component {
   static propTypes = {
