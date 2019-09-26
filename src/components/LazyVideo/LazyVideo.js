@@ -33,7 +33,20 @@ export class LazyVideo extends Component {
   }
 
   render() {
-    const {classes, id, controls, width, height, src, poster, autoplay, preload, muted, loop, ref} = this.props;
+    const {
+      classes,
+      id,
+      controls,
+      width,
+      height,
+      src,
+      poster,
+      autoplay,
+      preload,
+      muted,
+      loop,
+      forwardedRef
+    } = this.props;
     const mediaType = src.split('.').pop();
 
     //Only supporting mp4 and webm (for now?)
@@ -42,11 +55,11 @@ export class LazyVideo extends Component {
     }
 
     //TODO: Add support for autoplaying videos
-
+    console.log('alerting');
     return (
       <video
-        ref={ref}
-        className={classNames('lazy', ...classes)}
+        ref={forwardedRef}
+        className={[classNames('lazy', ...classes)]}
         id={id}
         width={width}
         height={height}
@@ -62,3 +75,5 @@ export class LazyVideo extends Component {
     );
   }
 }
+
+export const LazyVideoWithRef = React.forwardRef((props, ref) => <LazyVideo forwardedRef={ref} {...props} />);
