@@ -33,7 +33,7 @@ export class LazyVideo extends Component {
   }
 
   render() {
-    const {classes, id, controls, width, height, src, poster, autoplay, preload, muted, loop} = this.props;
+    const {classes, id, controls, width, height, src, poster, autoplay, preload, muted, loop, ref} = this.props;
     const mediaType = src.split('.').pop();
 
     //Only supporting mp4 and webm (for now?)
@@ -45,6 +45,7 @@ export class LazyVideo extends Component {
 
     return (
       <video
+        ref={ref}
         className={classNames('lazy', ...classes)}
         id={id}
         width={width}
