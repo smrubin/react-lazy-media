@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.com/smrubin/react-lazy-media.svg?branch=master)](https://travis-ci.com/smrubin/react-lazy-media)
 [![GitHub license](https://img.shields.io/github/license/smrubin/react-lazy-media.svg)](https://github.com/smrubin/react-lazy-media/blob/master/LICENSE)
 
-Lazy load image, picture, video, and iframe media React components. react-lazy-media uses [vanilla-lazyload](https://github.com/verlok/lazyload) under the hood to handle lazy loading.
+Lazy load image, picture, video, and iframe media React components. react-lazy-media uses [yall-js](https://github.com/malchata/yall.js) under the hood to handle lazy loading.
 
 Polyfilled with the [Intersection Observer Polyfill](https://www.npmjs.com/package/intersection-observer)
 

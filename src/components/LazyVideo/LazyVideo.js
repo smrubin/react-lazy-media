@@ -47,6 +47,7 @@ export class LazyVideo extends Component {
       loop,
       forwardedRef
     } = this.props;
+
     const mediaType = src.split('.').pop();
 
     //Only supporting mp4 and webm (for now?)
