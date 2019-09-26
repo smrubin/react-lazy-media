@@ -1,11 +1,28 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import {LazyVideo} from '../src/components/LazyVideo/LazyVideo';
+import {LazyVideoWithRef} from '../src';
 
 test('LazyVideo should require a src prop', () => {
   expect(() => {
     renderer.create(<LazyVideo />);
   }).toThrowErrorMatchingSnapshot();
+});
+
+test('LazyVideoWithRef should have default props AND a ref', () => {
+  const ref = React.createRef();
+  const component = renderer.create(<LazyVideoWithRef src={'/video.mp4'} ref={ref} />);
+
+  const tree = component.toJSON();
+  expect(tree.props).toEqual({
+    autoPlay: false,
+    controls: true,
+    loop: false,
+    muted: true,
+    preload: 'none',
+    className: ['lazy'],
+    ref: ''
+  });
 });
 
 test('LazyVideo should have default props', () => {

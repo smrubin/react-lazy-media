@@ -55,7 +55,7 @@ export class LazyVideo extends Component {
     }
 
     //TODO: Add support for autoplaying videos
-    console.log('alerting');
+
     return (
       <video
         ref={forwardedRef}

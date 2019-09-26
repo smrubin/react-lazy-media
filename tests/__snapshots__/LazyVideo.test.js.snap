@@ -3,7 +3,11 @@
 exports[`LazyVideo should autoplay 1`] = `
 <video
   autoPlay={false}
-  className="lazy"
+  className={
+    Array [
+      "lazy",
+    ]
+  }
   controls={true}
   loop={false}
   muted={true}
@@ -19,7 +23,11 @@ exports[`LazyVideo should autoplay 1`] = `
 exports[`LazyVideo should be preloaded 1`] = `
 <video
   autoPlay={false}
-  className="lazy"
+  className={
+    Array [
+      "lazy",
+    ]
+  }
   controls={true}
   loop={false}
   muted={true}
@@ -35,7 +43,11 @@ exports[`LazyVideo should be preloaded 1`] = `
 exports[`LazyVideo should have 300px height 1`] = `
 <video
   autoPlay={false}
-  className="lazy"
+  className={
+    Array [
+      "lazy",
+    ]
+  }
   controls={true}
   height={300}
   loop={false}
@@ -52,7 +64,11 @@ exports[`LazyVideo should have 300px height 1`] = `
 exports[`LazyVideo should have 300px width 1`] = `
 <video
   autoPlay={false}
-  className="lazy"
+  className={
+    Array [
+      "lazy",
+    ]
+  }
   controls={true}
   loop={false}
   muted={true}
@@ -69,7 +85,11 @@ exports[`LazyVideo should have 300px width 1`] = `
 exports[`LazyVideo should have an id 1`] = `
 <video
   autoPlay={false}
-  className="lazy"
+  className={
+    Array [
+      "lazy",
+    ]
+  }
   controls={true}
   id="lazyVideo"
   loop={false}
@@ -86,7 +106,11 @@ exports[`LazyVideo should have an id 1`] = `
 exports[`LazyVideo should have classes 1`] = `
 <video
   autoPlay={false}
-  className="lazy class1 class2"
+  className={
+    Array [
+      "lazy class1 class2",
+    ]
+  }
   controls={true}
   loop={false}
   muted={true}
@@ -102,7 +126,11 @@ exports[`LazyVideo should have classes 1`] = `
 exports[`LazyVideo should not be muted 1`] = `
 <video
   autoPlay={false}
-  className="lazy"
+  className={
+    Array [
+      "lazy",
+    ]
+  }
   controls={true}
   loop={false}
   muted={true}
@@ -118,7 +146,11 @@ exports[`LazyVideo should not be muted 1`] = `
 exports[`LazyVideo should not be preloaded 1`] = `
 <video
   autoPlay={false}
-  className="lazy"
+  className={
+    Array [
+      "lazy",
+    ]
+  }
   controls={true}
   loop={false}
   muted={true}
@@ -134,7 +166,11 @@ exports[`LazyVideo should not be preloaded 1`] = `
 exports[`LazyVideo should not show controls 1`] = `
 <video
   autoPlay={false}
-  className="lazy"
+  className={
+    Array [
+      "lazy",
+    ]
+  }
   controls={true}
   loop={false}
   muted={true}
@@ -150,7 +186,11 @@ exports[`LazyVideo should not show controls 1`] = `
 exports[`LazyVideo should render a video with a src 1`] = `
 <video
   autoPlay={false}
-  className="lazy"
+  className={
+    Array [
+      "lazy",
+    ]
+  }
   controls={true}
   loop={false}
   muted={true}
@@ -166,7 +206,11 @@ exports[`LazyVideo should render a video with a src 1`] = `
 exports[`LazyVideo should render a video with a src and poster 1`] = `
 <video
   autoPlay={false}
-  className="lazy"
+  className={
+    Array [
+      "lazy",
+    ]
+  }
   controls={true}
   data-poster="/poster.jpg"
   loop={false}
