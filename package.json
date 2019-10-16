@@ -9,7 +9,8 @@
     "pretty": "pretty-quick",
     "prepublish": "npm run lib",
     "storybook": "start-storybook -p 6006",
-    "test": "jest"
+    "test": "jest",
+    "updateSnapshot": "jest --updateSnapshot"
   },
   "files": [
     "lib"

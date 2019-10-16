@@ -60,7 +60,7 @@ export class LazyVideo extends Component {
     return (
       <video
         ref={forwardedRef}
-        className={[classNames('lazy', ...classes)]}
+        className={classNames('lazy', ...classes)}
         id={id}
         width={width}
         height={height}
@@ -77,4 +77,6 @@ export class LazyVideo extends Component {
   }
 }
 
-export const LazyVideoWithRef = React.forwardRef((props, ref) => <LazyVideo forwardedRef={ref} {...props} />);
+export const LazyVideoWithRef = React.forwardRef((props, ref) => {
+  return <LazyVideo forwardedRef={ref} {...props} />;
+});
